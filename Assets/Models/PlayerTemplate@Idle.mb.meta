@@ -95,7 +95,7 @@ ModelImporter:
     400086: //RootNode
     4300000: PlayerTemplate:Head_Geo
     4300002: PlayerTemplate:Body_Geo
-    7400000: Take 001
+    7400000: Idle
     9500000: //RootNode
     13700000: PlayerTemplate:Body_Geo
     13700002: PlayerTemplate:Head_Geo
@@ -113,13 +113,129 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Idle
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: PlayerTemplate:Body_Geo
+        weight: 1
+      - path: PlayerTemplate:Head_Geo
+        weight: 1
+      - path: PlayerTemplate:Root_JNT
+        weight: 1
+      - path: PlayerTemplate:Root_JNT/PlayerTemplate:Pelvic_JNT
+        weight: 1
+      - path: PlayerTemplate:Root_JNT/PlayerTemplate:Pelvic_JNT/PlayerTemplate:L_UpperLeg_JNT
+        weight: 1
+      - path: PlayerTemplate:Root_JNT/PlayerTemplate:Pelvic_JNT/PlayerTemplate:L_UpperLeg_JNT/PlayerTemplate:L_LowerLeg_JNT
+        weight: 1
+      - path: PlayerTemplate:Root_JNT/PlayerTemplate:Pelvic_JNT/PlayerTemplate:L_UpperLeg_JNT/PlayerTemplate:L_LowerLeg_JNT/PlayerTemplate:L_Foot_JNT
+        weight: 1
+      - path: PlayerTemplate:Root_JNT/PlayerTemplate:Pelvic_JNT/PlayerTemplate:L_UpperLeg_JNT/PlayerTemplate:L_LowerLeg_JNT/PlayerTemplate:L_Foot_JNT/PlayerTemplate:L_Ball_JNT
+        weight: 1
+      - path: PlayerTemplate:Root_JNT/PlayerTemplate:Pelvic_JNT/PlayerTemplate:L_UpperLeg_JNT/PlayerTemplate:L_LowerLeg_JNT/PlayerTemplate:L_Foot_JNT/PlayerTemplate:L_Ball_JNT/PlayerTemplate:L_Ball_END
+        weight: 1
+      - path: PlayerTemplate:Root_JNT/PlayerTemplate:Pelvic_JNT/PlayerTemplate:R_UpperLeg_JNT
+        weight: 1
+      - path: PlayerTemplate:Root_JNT/PlayerTemplate:Pelvic_JNT/PlayerTemplate:R_UpperLeg_JNT/PlayerTemplate:R_LowerLeg_JNT
+        weight: 1
+      - path: PlayerTemplate:Root_JNT/PlayerTemplate:Pelvic_JNT/PlayerTemplate:R_UpperLeg_JNT/PlayerTemplate:R_LowerLeg_JNT/PlayerTemplate:R_Foot_JNT
+        weight: 1
+      - path: PlayerTemplate:Root_JNT/PlayerTemplate:Pelvic_JNT/PlayerTemplate:R_UpperLeg_JNT/PlayerTemplate:R_LowerLeg_JNT/PlayerTemplate:R_Foot_JNT/PlayerTemplate:R_Ball_JNT
+        weight: 1
+      - path: PlayerTemplate:Root_JNT/PlayerTemplate:Pelvic_JNT/PlayerTemplate:R_UpperLeg_JNT/PlayerTemplate:R_LowerLeg_JNT/PlayerTemplate:R_Foot_JNT/PlayerTemplate:R_Ball_JNT/PlayerTemplate:R_Ball_END
+        weight: 1
+      - path: PlayerTemplate:Root_JNT/PlayerTemplate:Spine1_JNT
+        weight: 1
+      - path: PlayerTemplate:Root_JNT/PlayerTemplate:Spine1_JNT/PlayerTemplate:Spine2_JNT
+        weight: 1
+      - path: PlayerTemplate:Root_JNT/PlayerTemplate:Spine1_JNT/PlayerTemplate:Spine2_JNT/PlayerTemplate:L_UpperArm_JNT
+        weight: 1
+      - path: PlayerTemplate:Root_JNT/PlayerTemplate:Spine1_JNT/PlayerTemplate:Spine2_JNT/PlayerTemplate:L_UpperArm_JNT/PlayerTemplate:L_ForeArm_JNT
+        weight: 1
+      - path: PlayerTemplate:Root_JNT/PlayerTemplate:Spine1_JNT/PlayerTemplate:Spine2_JNT/PlayerTemplate:L_UpperArm_JNT/PlayerTemplate:L_ForeArm_JNT/PlayerTemplate:L_Hand_JNT
+        weight: 1
+      - path: PlayerTemplate:Root_JNT/PlayerTemplate:Spine1_JNT/PlayerTemplate:Spine2_JNT/PlayerTemplate:L_UpperArm_JNT/PlayerTemplate:L_ForeArm_JNT/PlayerTemplate:L_Hand_JNT/PlayerTemplate:L_Index01_JNT
+        weight: 1
+      - path: PlayerTemplate:Root_JNT/PlayerTemplate:Spine1_JNT/PlayerTemplate:Spine2_JNT/PlayerTemplate:L_UpperArm_JNT/PlayerTemplate:L_ForeArm_JNT/PlayerTemplate:L_Hand_JNT/PlayerTemplate:L_Index01_JNT/PlayerTemplate:L_Index02_JNT
+        weight: 1
+      - path: PlayerTemplate:Root_JNT/PlayerTemplate:Spine1_JNT/PlayerTemplate:Spine2_JNT/PlayerTemplate:L_UpperArm_JNT/PlayerTemplate:L_ForeArm_JNT/PlayerTemplate:L_Hand_JNT/PlayerTemplate:L_Index01_JNT/PlayerTemplate:L_Index02_JNT/PlayerTemplate:L_Index_END
+        weight: 1
+      - path: PlayerTemplate:Root_JNT/PlayerTemplate:Spine1_JNT/PlayerTemplate:Spine2_JNT/PlayerTemplate:L_UpperArm_JNT/PlayerTemplate:L_ForeArm_JNT/PlayerTemplate:L_Hand_JNT/PlayerTemplate:L_Mitt01_JNT
+        weight: 1
+      - path: PlayerTemplate:Root_JNT/PlayerTemplate:Spine1_JNT/PlayerTemplate:Spine2_JNT/PlayerTemplate:L_UpperArm_JNT/PlayerTemplate:L_ForeArm_JNT/PlayerTemplate:L_Hand_JNT/PlayerTemplate:L_Mitt01_JNT/PlayerTemplate:L_Mitt02_JNT
+        weight: 1
+      - path: PlayerTemplate:Root_JNT/PlayerTemplate:Spine1_JNT/PlayerTemplate:Spine2_JNT/PlayerTemplate:L_UpperArm_JNT/PlayerTemplate:L_ForeArm_JNT/PlayerTemplate:L_Hand_JNT/PlayerTemplate:L_Mitt01_JNT/PlayerTemplate:L_Mitt02_JNT/PlayerTemplate:L_Mitt_END
+        weight: 1
+      - path: PlayerTemplate:Root_JNT/PlayerTemplate:Spine1_JNT/PlayerTemplate:Spine2_JNT/PlayerTemplate:L_UpperArm_JNT/PlayerTemplate:L_ForeArm_JNT/PlayerTemplate:L_Hand_JNT/PlayerTemplate:L_Thumb01_JNT
+        weight: 1
+      - path: PlayerTemplate:Root_JNT/PlayerTemplate:Spine1_JNT/PlayerTemplate:Spine2_JNT/PlayerTemplate:L_UpperArm_JNT/PlayerTemplate:L_ForeArm_JNT/PlayerTemplate:L_Hand_JNT/PlayerTemplate:L_Thumb01_JNT/PlayerTemplate:L_Thumb02_JNT
+        weight: 1
+      - path: PlayerTemplate:Root_JNT/PlayerTemplate:Spine1_JNT/PlayerTemplate:Spine2_JNT/PlayerTemplate:L_UpperArm_JNT/PlayerTemplate:L_ForeArm_JNT/PlayerTemplate:L_Hand_JNT/PlayerTemplate:L_Thumb01_JNT/PlayerTemplate:L_Thumb02_JNT/PlayerTemplate:L_Thumb_End
+        weight: 1
+      - path: PlayerTemplate:Root_JNT/PlayerTemplate:Spine1_JNT/PlayerTemplate:Spine2_JNT/PlayerTemplate:Neck_JNT
+        weight: 1
+      - path: PlayerTemplate:Root_JNT/PlayerTemplate:Spine1_JNT/PlayerTemplate:Spine2_JNT/PlayerTemplate:Neck_JNT/PlayerTemplate:Head_JNT
+        weight: 1
+      - path: PlayerTemplate:Root_JNT/PlayerTemplate:Spine1_JNT/PlayerTemplate:Spine2_JNT/PlayerTemplate:Neck_JNT/PlayerTemplate:Head_JNT/PlayerTemplate:Head_END
+        weight: 1
+      - path: PlayerTemplate:Root_JNT/PlayerTemplate:Spine1_JNT/PlayerTemplate:Spine2_JNT/PlayerTemplate:R_UpperArm_JNT
+        weight: 1
+      - path: PlayerTemplate:Root_JNT/PlayerTemplate:Spine1_JNT/PlayerTemplate:Spine2_JNT/PlayerTemplate:R_UpperArm_JNT/PlayerTemplate:R_ForeArm_JNT
+        weight: 1
+      - path: PlayerTemplate:Root_JNT/PlayerTemplate:Spine1_JNT/PlayerTemplate:Spine2_JNT/PlayerTemplate:R_UpperArm_JNT/PlayerTemplate:R_ForeArm_JNT/PlayerTemplate:R_Hand_JNT
+        weight: 1
+      - path: PlayerTemplate:Root_JNT/PlayerTemplate:Spine1_JNT/PlayerTemplate:Spine2_JNT/PlayerTemplate:R_UpperArm_JNT/PlayerTemplate:R_ForeArm_JNT/PlayerTemplate:R_Hand_JNT/PlayerTemplate:R_Index01_JNT
+        weight: 1
+      - path: PlayerTemplate:Root_JNT/PlayerTemplate:Spine1_JNT/PlayerTemplate:Spine2_JNT/PlayerTemplate:R_UpperArm_JNT/PlayerTemplate:R_ForeArm_JNT/PlayerTemplate:R_Hand_JNT/PlayerTemplate:R_Index01_JNT/PlayerTemplate:R_Index02_JNT
+        weight: 1
+      - path: PlayerTemplate:Root_JNT/PlayerTemplate:Spine1_JNT/PlayerTemplate:Spine2_JNT/PlayerTemplate:R_UpperArm_JNT/PlayerTemplate:R_ForeArm_JNT/PlayerTemplate:R_Hand_JNT/PlayerTemplate:R_Index01_JNT/PlayerTemplate:R_Index02_JNT/PlayerTemplate:R_Index_END
+        weight: 1
+      - path: PlayerTemplate:Root_JNT/PlayerTemplate:Spine1_JNT/PlayerTemplate:Spine2_JNT/PlayerTemplate:R_UpperArm_JNT/PlayerTemplate:R_ForeArm_JNT/PlayerTemplate:R_Hand_JNT/PlayerTemplate:R_Mitt01_JNT
+        weight: 1
+      - path: PlayerTemplate:Root_JNT/PlayerTemplate:Spine1_JNT/PlayerTemplate:Spine2_JNT/PlayerTemplate:R_UpperArm_JNT/PlayerTemplate:R_ForeArm_JNT/PlayerTemplate:R_Hand_JNT/PlayerTemplate:R_Mitt01_JNT/PlayerTemplate:R_Mitt02_JNT
+        weight: 1
+      - path: PlayerTemplate:Root_JNT/PlayerTemplate:Spine1_JNT/PlayerTemplate:Spine2_JNT/PlayerTemplate:R_UpperArm_JNT/PlayerTemplate:R_ForeArm_JNT/PlayerTemplate:R_Hand_JNT/PlayerTemplate:R_Mitt01_JNT/PlayerTemplate:R_Mitt02_JNT/PlayerTemplate:R_Mitt_END
+        weight: 1
+      - path: PlayerTemplate:Root_JNT/PlayerTemplate:Spine1_JNT/PlayerTemplate:Spine2_JNT/PlayerTemplate:R_UpperArm_JNT/PlayerTemplate:R_ForeArm_JNT/PlayerTemplate:R_Hand_JNT/PlayerTemplate:R_Thumb01_JNT
+        weight: 1
+      - path: PlayerTemplate:Root_JNT/PlayerTemplate:Spine1_JNT/PlayerTemplate:Spine2_JNT/PlayerTemplate:R_UpperArm_JNT/PlayerTemplate:R_ForeArm_JNT/PlayerTemplate:R_Hand_JNT/PlayerTemplate:R_Thumb01_JNT/PlayerTemplate:R_Thumb02_JNT
+        weight: 1
+      - path: PlayerTemplate:Root_JNT/PlayerTemplate:Spine1_JNT/PlayerTemplate:Spine2_JNT/PlayerTemplate:R_UpperArm_JNT/PlayerTemplate:R_ForeArm_JNT/PlayerTemplate:R_Hand_JNT/PlayerTemplate:R_Thumb01_JNT/PlayerTemplate:R_Thumb02_JNT/PlayerTemplate:R_Thumb_End
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -154,7 +270,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    rootMotionBoneName: 
+    rootMotionBoneName: PlayerTemplate:Root_JNT
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2
