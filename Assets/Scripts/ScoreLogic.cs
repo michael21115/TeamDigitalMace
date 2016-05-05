@@ -8,6 +8,8 @@ public class ScoreLogic : MonoBehaviour {
 	public static int ScoreP1, ScoreP2, ScoreP3, ScoreP4;
 	[SerializeField] Text P1, P2, P3, P4;
 
+	public Transform BombMakerPrefab;
+
 	int maxWidth = 3;
 	int maxHeight = 4;
 	float timer = 0f;
@@ -45,12 +47,13 @@ public class ScoreLogic : MonoBehaviour {
                 WinZone = GameObject.Find("WinZone").transform;
                 placeComponent(WinZone);
 
-                BombSpawner = GameObject.Find("BombSpawner").transform;
-                placeComponent(BombSpawner);
-
                 PlayerContainer = GameObject.Find("PlayerContainer").transform;
                 placeComponent(PlayerContainer);
                 playersSpawned = true;
+
+				//BombSpawner = GameObject.Find("BombSpawner").transform;
+				Instantiate(BombMakerPrefab, new Vector3 (5f,0f,0f), Quaternion.identity);
+				placeComponent(BombMakerPrefab);
             }
         }
 	}
