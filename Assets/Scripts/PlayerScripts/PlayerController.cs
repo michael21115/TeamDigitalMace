@@ -97,25 +97,25 @@ public class PlayerController : MonoBehaviour {
                 // Xbox Controller A button
                 if (Input.GetButtonDown("Joy " + playerNo + " A"))
                 {
-                    Debug.Log("Player " + playerNo + " pressed 'A'");
+                    //Debug.Log("Player " + playerNo + " pressed 'A'");
                     Cross_Button();
                 }
                 // Xbox Controller B button
                 if (Input.GetButtonDown("Joy " + playerNo + " B"))
                 {
-                    Debug.Log("Player " + playerNo + " pressed 'B'");
+                    //Debug.Log("Player " + playerNo + " pressed 'B'");
                     Circle_Button();
                 }
                 // Xbox Controller X button
                 if (Input.GetButtonDown("Joy " + playerNo + " X"))
                 {
-                    Debug.Log("Player " + playerNo + " pressed 'X'");
+                    //Debug.Log("Player " + playerNo + " pressed 'X'");
                     Square_Button(); 
                 }
                 // Xbox Controller Y button 
                 if (Input.GetButtonDown("Joy " + playerNo + " Y"))
                 {
-                    Debug.Log("Player " + playerNo + " pressed 'Y'");
+                    //Debug.Log("Player " + playerNo + " pressed 'Y'");
                     Triangle_Button();
                 }
             }
@@ -125,25 +125,25 @@ public class PlayerController : MonoBehaviour {
                 // PS4 Controller Square button
                 if (Input.GetButtonDown("Joy " + playerNo + " A"))
                 {
-                    Debug.Log("Player " + playerNo + " pressed 'Square'");
+                    //Debug.Log("Player " + playerNo + " pressed 'Square'");
                     Square_Button();
                 }
                 // PS4 Controller Cross button
                 if (Input.GetButtonDown("Joy " + playerNo + " B"))
                 {
-                    Debug.Log("Player " + playerNo + " pressed 'Cross'");
+                   // Debug.Log("Player " + playerNo + " pressed 'Cross'");
                     Cross_Button();
                 }
                 // Xbox Controller Circle button
                 if (Input.GetButtonDown("Joy " + playerNo + " X"))
                 {
-                    Debug.Log("Player " + playerNo + " pressed 'Circle'");
+                    //Debug.Log("Player " + playerNo + " pressed 'Circle'");
                     Circle_Button();
                 }
                 // Xbox Controller Triangle button 
                 if (Input.GetButtonDown("Joy " + playerNo + " Y"))
                 {
-                    Debug.Log("Player " + playerNo + " pressed 'Triangle'");
+                    //Debug.Log("Player " + playerNo + " pressed 'Triangle'");
                     Triangle_Button();
                 }
             }

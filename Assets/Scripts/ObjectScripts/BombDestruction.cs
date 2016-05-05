@@ -16,7 +16,7 @@ public class BombDestruction : MonoBehaviour {
     {
         if (tag == "Projectile" && !spawned)
         {
-            if (collider.gameObject.tag == "Wall" || collider.gameObject.tag == "Door")
+           // if (collider.gameObject.tag == "Wall" || collider.gameObject.tag == "Door")
             {
                 spawner.GetComponent<SpawnBomb>().isBomb = false;
                 spawned = true;

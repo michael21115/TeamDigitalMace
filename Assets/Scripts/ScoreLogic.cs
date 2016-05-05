@@ -1,11 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ScoreLogic : MonoBehaviour {
 
 	[SerializeField] Transform PlayerContainer, GoalItem, WinZone, BombSpawner;
-	public static int ScoreP1, ScoreP2, ScoreP3, ScoreP4;
+    public static int ScoreP1, ScoreP2, ScoreP3, ScoreP4;
+    public static string winner = null;
+    public int winNumber;
 	[SerializeField] Text P1, P2, P3, P4;
 
 	int maxWidth = 3;
@@ -33,6 +36,28 @@ public class ScoreLogic : MonoBehaviour {
 	}
 
 	void Update() {
+
+        if(P1.text == winNumber.ToString())
+        {
+            winner = "Player Red";
+        }
+        else if(P2.text == winNumber.ToString())
+        {
+            winner = "Player Blue";
+        }
+        else if(P3.text == winNumber.ToString())
+        {
+            winner = "Player Yellow";
+        }
+        else if(P4.text == winNumber.ToString())
+        {
+            winner = "Player Green";
+        }
+
+        if(winner != null)
+        {
+            SceneManager.LoadScene(2);
+        }
 
         if(timer < 1f)
         {
