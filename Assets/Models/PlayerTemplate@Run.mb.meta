@@ -1,0 +1,165 @@
+fileFormatVersion: 2
+guid: 4f6d3e9f472f34de58fe6e24a48a932a
+timeCreated: 1462303473
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: PlayerTemplate:Body_Geo
+    100002: PlayerTemplate:Head_END
+    100004: PlayerTemplate:Head_Geo
+    100006: PlayerTemplate:Head_JNT
+    100008: PlayerTemplate:L_Ball_END
+    100010: PlayerTemplate:L_Ball_JNT
+    100012: PlayerTemplate:L_Foot_JNT
+    100014: PlayerTemplate:L_ForeArm_JNT
+    100016: PlayerTemplate:L_Hand_JNT
+    100018: PlayerTemplate:L_Index01_JNT
+    100020: PlayerTemplate:L_Index02_JNT
+    100022: PlayerTemplate:L_Index_END
+    100024: PlayerTemplate:L_LowerLeg_JNT
+    100026: PlayerTemplate:L_Mitt01_JNT
+    100028: PlayerTemplate:L_Mitt02_JNT
+    100030: PlayerTemplate:L_Mitt_END
+    100032: PlayerTemplate:L_Thumb01_JNT
+    100034: PlayerTemplate:L_Thumb02_JNT
+    100036: PlayerTemplate:L_Thumb_End
+    100038: PlayerTemplate:L_UpperArm_JNT
+    100040: PlayerTemplate:L_UpperLeg_JNT
+    100042: PlayerTemplate:Neck_JNT
+    100044: PlayerTemplate:Pelvic_JNT
+    100046: PlayerTemplate:R_Ball_END
+    100048: PlayerTemplate:R_Ball_JNT
+    100050: PlayerTemplate:R_Foot_JNT
+    100052: PlayerTemplate:R_ForeArm_JNT
+    100054: PlayerTemplate:R_Hand_JNT
+    100056: PlayerTemplate:R_Index01_JNT
+    100058: PlayerTemplate:R_Index02_JNT
+    100060: PlayerTemplate:R_Index_END
+    100062: PlayerTemplate:R_LowerLeg_JNT
+    100064: PlayerTemplate:R_Mitt01_JNT
+    100066: PlayerTemplate:R_Mitt02_JNT
+    100068: PlayerTemplate:R_Mitt_END
+    100070: PlayerTemplate:R_Thumb01_JNT
+    100072: PlayerTemplate:R_Thumb02_JNT
+    100074: PlayerTemplate:R_Thumb_End
+    100076: PlayerTemplate:R_UpperArm_JNT
+    100078: PlayerTemplate:R_UpperLeg_JNT
+    100080: PlayerTemplate:Root_JNT
+    100082: PlayerTemplate:Spine1_JNT
+    100084: PlayerTemplate:Spine2_JNT
+    100086: //RootNode
+    400000: PlayerTemplate:Body_Geo
+    400002: PlayerTemplate:Head_END
+    400004: PlayerTemplate:Head_Geo
+    400006: PlayerTemplate:Head_JNT
+    400008: PlayerTemplate:L_Ball_END
+    400010: PlayerTemplate:L_Ball_JNT
+    400012: PlayerTemplate:L_Foot_JNT
+    400014: PlayerTemplate:L_ForeArm_JNT
+    400016: PlayerTemplate:L_Hand_JNT
+    400018: PlayerTemplate:L_Index01_JNT
+    400020: PlayerTemplate:L_Index02_JNT
+    400022: PlayerTemplate:L_Index_END
+    400024: PlayerTemplate:L_LowerLeg_JNT
+    400026: PlayerTemplate:L_Mitt01_JNT
+    400028: PlayerTemplate:L_Mitt02_JNT
+    400030: PlayerTemplate:L_Mitt_END
+    400032: PlayerTemplate:L_Thumb01_JNT
+    400034: PlayerTemplate:L_Thumb02_JNT
+    400036: PlayerTemplate:L_Thumb_End
+    400038: PlayerTemplate:L_UpperArm_JNT
+    400040: PlayerTemplate:L_UpperLeg_JNT
+    400042: PlayerTemplate:Neck_JNT
+    400044: PlayerTemplate:Pelvic_JNT
+    400046: PlayerTemplate:R_Ball_END
+    400048: PlayerTemplate:R_Ball_JNT
+    400050: PlayerTemplate:R_Foot_JNT
+    400052: PlayerTemplate:R_ForeArm_JNT
+    400054: PlayerTemplate:R_Hand_JNT
+    400056: PlayerTemplate:R_Index01_JNT
+    400058: PlayerTemplate:R_Index02_JNT
+    400060: PlayerTemplate:R_Index_END
+    400062: PlayerTemplate:R_LowerLeg_JNT
+    400064: PlayerTemplate:R_Mitt01_JNT
+    400066: PlayerTemplate:R_Mitt02_JNT
+    400068: PlayerTemplate:R_Mitt_END
+    400070: PlayerTemplate:R_Thumb01_JNT
+    400072: PlayerTemplate:R_Thumb02_JNT
+    400074: PlayerTemplate:R_Thumb_End
+    400076: PlayerTemplate:R_UpperArm_JNT
+    400078: PlayerTemplate:R_UpperLeg_JNT
+    400080: PlayerTemplate:Root_JNT
+    400082: PlayerTemplate:Spine1_JNT
+    400084: PlayerTemplate:Spine2_JNT
+    400086: //RootNode
+    4300000: PlayerTemplate:Head_Geo
+    4300002: PlayerTemplate:Body_Geo
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: PlayerTemplate:Body_Geo
+    13700002: PlayerTemplate:Head_Geo
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

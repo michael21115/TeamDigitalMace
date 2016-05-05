@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: e9fe3ea8cabcbac4aa4e3e84b9dc1bd9
+timeCreated: 1460663830
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - roomPrefab: {fileID: 485066, guid: f727b0fed939b2242b7c99062f81d83c, type: 2}
+  - roomPrefab2: {fileID: 412750, guid: 898a21d5c663cf34c9c3c9dede452c33, type: 2}
+  - roomPrefab3: {fileID: 413246, guid: 97e165d7180c38441bd4092a79fb8fc0, type: 2}
+  - roomPrefab4: {fileID: 414798, guid: fbadacf5a94541642bd8d405cc59354d, type: 2}
+  - roomPrefab5: {fileID: 444456, guid: cf6df2a295e5b9d4fbb8456af3633281, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
