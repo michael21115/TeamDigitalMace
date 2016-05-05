@@ -2,13 +2,12 @@
 using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
-using XInputDotNetPure;
 
 public class PlayerController : MonoBehaviour {
 
     [SerializeField] float waitTime = 10f;
     [SerializeField] float currTime = 0f;
-        
+
     public int playerNo;
     public Color playerColor;
     public float speed = 2000f;
@@ -16,6 +15,10 @@ public class PlayerController : MonoBehaviour {
     public float dashBoost = 1000f;
     bool canDash = true;
     bool hasDashed = false;
+
+    public float horizontal;
+    public float vertical;
+    public Vector3 movement;
 
     void Start ()
     {
@@ -60,9 +63,9 @@ public class PlayerController : MonoBehaviour {
     {
         // For each joystick attached, control that coresponding player
         // Maybe we will have a player select screen?
-        float horizontal = Input.GetAxis("Joy " + playerNo + " Horizontal");
-        float vertical = Input.GetAxis("Joy " + playerNo + " Vertical");
-        Vector3 movement = new Vector3(horizontal, 0, vertical) * speed;
+        horizontal = Input.GetAxis("Joy " + playerNo + " Horizontal");
+        vertical = Input.GetAxis("Joy " + playerNo + " Vertical");
+        movement = new Vector3(horizontal, 0, vertical) * speed;
 
         //players[i].position += movement * Time.deltaTime;
 
