@@ -17,9 +17,9 @@ public class PlayerController : MonoBehaviour {
     bool canDash = true;
     bool hasDashed = false;
 
-    public float horizontal;
-    public float vertical;
-    public Vector3 movement;
+    [HideInInspector] public float horizontal;
+    [HideInInspector] public float vertical;
+    [HideInInspector] public Vector3 movement;
 
 	public Image ScoreBox;
 
@@ -51,11 +51,11 @@ public class PlayerController : MonoBehaviour {
             currTime += Time.deltaTime;
             if (currTime >= waitTime)
             {
-				ScoreBox.fillAmount = (currTime / 100);
 				hasDashed = false;
                 canDash = true;
                 currTime = 0f;
             }
+            ScoreBox.fillAmount = (waitTime - currTime) / waitTime;
         }
 
         PlayerInput();
