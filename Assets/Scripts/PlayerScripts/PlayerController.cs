@@ -51,11 +51,11 @@ public class PlayerController : MonoBehaviour {
             currTime += Time.deltaTime;
             if (currTime >= waitTime)
             {
-				ScoreBox.fillAmount = (currTime / 100);
 				hasDashed = false;
                 canDash = true;
                 currTime = 0f;
             }
+            ScoreBox.fillAmount = (waitTime - currTime) / waitTime;
         }
 
         PlayerInput();
