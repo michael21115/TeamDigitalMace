@@ -19,7 +19,7 @@ public class SpawnBomb : MonoBehaviour {
 
 	void Start() {
 		isBomb = false;
-		timer = 0.1f;
+		timer = 1f;
 	}
 
 	// Update is called once per frame
