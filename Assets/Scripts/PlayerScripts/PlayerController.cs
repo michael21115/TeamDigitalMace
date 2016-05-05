@@ -2,6 +2,7 @@
 using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour {
 
@@ -19,6 +20,8 @@ public class PlayerController : MonoBehaviour {
     [HideInInspector] public float horizontal;
     [HideInInspector] public float vertical;
     [HideInInspector] public Vector3 movement;
+
+	public Image ScoreBox;
 
     void Start ()
     {
@@ -48,7 +51,8 @@ public class PlayerController : MonoBehaviour {
             currTime += Time.deltaTime;
             if (currTime >= waitTime)
             {
-                hasDashed = false;
+				ScoreBox.fillAmount = (currTime / 100);
+				hasDashed = false;
                 canDash = true;
                 currTime = 0f;
             }

@@ -9,7 +9,7 @@ public class BombDestruction : MonoBehaviour {
 
     void Start()
     {
-        spawner = GameObject.Find("BombSpawner").transform;
+		spawner = GameObject.Find("BombSpawner(Clone)").transform;
     }
 
     void OnTriggerEnter(Collider collider)
