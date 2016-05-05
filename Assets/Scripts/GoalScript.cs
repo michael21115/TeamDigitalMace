@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class GoalScript : MonoBehaviour {
 
@@ -30,6 +31,7 @@ public class GoalScript : MonoBehaviour {
             {
                 scoreLogic.GetComponent<ScoreLogic>().addOne(4);
             }
+			SceneManager.LoadScene(1);
         }
     }
 }
