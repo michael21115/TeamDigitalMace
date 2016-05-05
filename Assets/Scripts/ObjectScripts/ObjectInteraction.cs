@@ -36,7 +36,7 @@ public class ObjectInteraction : MonoBehaviour {
 
         // If another player bumps into you then apply a bounce force in their direction
         // If a projectile or player hits you, drop the key item you are holding and apply knockback
-        if (other.collider.tag == "Projectile" || other.collider.tag == "Player")
+        if (other.collider.tag == "Projectile" )//|| other.collider.tag == "Player")
         {
             if (keyItem)
             {
