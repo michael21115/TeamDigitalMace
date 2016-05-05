@@ -16,9 +16,9 @@ public class PlayerController : MonoBehaviour {
     bool canDash = true;
     bool hasDashed = false;
 
-    public float horizontal;
-    public float vertical;
-    public Vector3 movement;
+    [HideInInspector] public float horizontal;
+    [HideInInspector] public float vertical;
+    [HideInInspector] public Vector3 movement;
 
     void Start ()
     {
