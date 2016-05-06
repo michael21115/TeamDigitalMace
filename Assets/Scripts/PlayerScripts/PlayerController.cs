@@ -101,7 +101,7 @@ public class PlayerController : MonoBehaviour {
                 // Xbox Controller A button
                 if (Input.GetButtonDown("Joy " + playerNo + " A"))
                 {
-                    //Debug.Log("Player " + playerNo + " pressed 'A'");
+                    Debug.Log("Player " + playerNo + " pressed 'A'");
                     Cross_Button();
                 }
                 // Xbox Controller B button
@@ -179,7 +179,7 @@ public class PlayerController : MonoBehaviour {
     }
     void Triangle_Button ()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     void Square_Button ()
     {
