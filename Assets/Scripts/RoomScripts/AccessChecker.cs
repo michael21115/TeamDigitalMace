@@ -60,7 +60,7 @@ public class AccessChecker : MonoBehaviour {
                 //Get the opposite index of the door
                 int opposite = i + 2;
                 if (opposite == 4) opposite = 0; else if (opposite == 5) opposite = 1;
-                Debug.Log(room.transform.name + " " + (DoorLocations)(i) + " to " + newRoom.name);
+                //Debug.Log(room.transform.name + " " + (DoorLocations)(i) + " to " + newRoom.name);
                 newProperties.doorsChecked[opposite] = true;
                 if (!newProperties.accessible)
                     totalAccess.totalAccess++;

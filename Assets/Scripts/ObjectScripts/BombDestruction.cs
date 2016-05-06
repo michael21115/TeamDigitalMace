@@ -9,14 +9,14 @@ public class BombDestruction : MonoBehaviour {
 
     void Start()
     {
-		spawner = GameObject.Find("BombSpawner(Clone)").transform;
+		spawner = GameObject.Find("BombSpawner").transform;
     }
 
     void OnTriggerEnter(Collider collider)
     {
         if (tag == "Projectile" && !spawned)
         {
-            if (collider.gameObject.tag == "Wall" || collider.gameObject.tag == "Door")
+           // if (collider.gameObject.tag == "Wall" || collider.gameObject.tag == "Door")
             {
                 spawner.GetComponent<SpawnBomb>().isBomb = false;
                 spawned = true;

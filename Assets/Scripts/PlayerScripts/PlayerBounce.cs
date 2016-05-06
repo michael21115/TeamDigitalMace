@@ -31,10 +31,19 @@ public class PlayerBounce : MonoBehaviour {
     {
         if (col.collider.tag.Contains("Player"))
         {
-            Debug.Log("Its a player!");
+            //Debug.Log("Its a player!");
             direction = (col.collider.transform.position - transform.position).normalized;
             direction.y = 0f;
             pushBack = true;
         }
+        else if (col.collider.tag.Contains("Explosion"))
+        {
+            Debug.Log("GetRekt");
+            direction = (col.collider.transform.position - transform.position).normalized;
+            direction.y = 0f;
+            pushBack = true;
+        }
+        
     }
+
 }
