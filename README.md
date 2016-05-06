@@ -2,4 +2,14 @@
 
 ## Overview
 
-NAME (TBD) is a 2D top-down game where 4 players explore a procedurally generated house. Each character has access to different entryways and they must work together to open up as many rooms as possible to find the 3 keys to escape; however, there is an increasing chance that a player will become a traitor as the game goes on, changing their goals to stopping the other three players from escaping.
+NAME (TBD) is a fast paced 2.5D top-down game where 4 players race around a procedurally generated home, collecting items for a scavenger hunt. The first to collect (X) items WINS!
+
+Name ideas:
+  Hare and Hounds (synonym for scavenger hunt)
+    We could have College Edition / PreSchool Edition
+    Each one would have items to collect dedicated to that age group (Future version)
+    
+Further Conceptualization:
+  The "win zone" can be the person running the scavenger hunt that you have to return the item to. Maybe they could show you what the item you'll collect is in the beginning and then players can run off frantically (this could cover the loading of our scene).
+  
+  A small victory scene after each round was recommended, so we could implement that and a better total victory screen.
