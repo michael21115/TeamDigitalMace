@@ -7,6 +7,8 @@ public class roomDecorationPlacer : MonoBehaviour {
     int counter;
 
     [SerializeField] Transform[] furniture;
+    [SerializeField]
+    Transform teleporter;
     [SerializeField] Transform blueprint;
     [SerializeField] float totalChance;
     [SerializeField]
@@ -42,16 +44,23 @@ public class roomDecorationPlacer : MonoBehaviour {
                 foreach(Transform obj in furniture)
                 {
                     //Debug.Log(currentChance);
-                    if (randomNumber < currentChance)
+                    if (randomNumber < currentChance && counter > 0)
                     {
                         currentChance = uniformChance;
                         pos.y = obj.transform.position.y;
                         SpawnObject(obj);
+                        counter--;
                         break;
                     }
                     else
                     {
                         currentChance += uniformChance;
+                    }
+                    randomNumber = Random.Range(0.0f, 1.0f);
+                    if (randomNumber < 0.005f)
+                    {
+                        pos.y = teleporter.transform.position.y;
+                        SpawnObject(teleporter);
                     }
                 }
                 if (counter == 0) //this ensures that only a max of around 4-5 objects spawn. 0 objects spawned is also possible

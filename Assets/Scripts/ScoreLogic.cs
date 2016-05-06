@@ -1,14 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ScoreLogic : MonoBehaviour {
 
 	[SerializeField] Transform PlayerContainer, GoalItem, WinZone, BombSpawner;
-	public static int ScoreP1, ScoreP2, ScoreP3, ScoreP4;
+    public static int ScoreP1, ScoreP2, ScoreP3, ScoreP4;
+    public static string winner = null;
+    public int winNumber;
 	[SerializeField] Text P1, P2, P3, P4;
-
-	public Transform BombMakerPrefab;
 
 	int maxWidth = 3;
 	int maxHeight = 4;
@@ -36,6 +37,28 @@ public class ScoreLogic : MonoBehaviour {
 
 	void Update() {
 
+        if(P1.text == winNumber.ToString())
+        {
+            winner = "Player Red";
+        }
+        else if(P2.text == winNumber.ToString())
+        {
+            winner = "Player Blue";
+        }
+        else if(P3.text == winNumber.ToString())
+        {
+            winner = "Player Yellow";
+        }
+        else if(P4.text == winNumber.ToString())
+        {
+            winner = "Player Green";
+        }
+
+        if(winner != null)
+        {
+            SceneManager.LoadScene(2);
+        }
+
         if(timer < 1f)
         {
             timer += Time.deltaTime;
@@ -47,13 +70,12 @@ public class ScoreLogic : MonoBehaviour {
                 WinZone = GameObject.Find("WinZone").transform;
                 placeComponent(WinZone);
 
+                BombSpawner = GameObject.Find("BombSpawner").transform;
+                placeComponent(BombSpawner);
+
                 PlayerContainer = GameObject.Find("PlayerContainer").transform;
                 placeComponent(PlayerContainer);
                 playersSpawned = true;
-
-				//BombSpawner = GameObject.Find("BombSpawner").transform;
-				Instantiate(BombMakerPrefab, new Vector3 (5f,0f,0f), Quaternion.identity);
-				placeComponent(BombMakerPrefab);
             }
         }
 	}
