@@ -55,7 +55,15 @@ public class PlayerController : MonoBehaviour {
                 canDash = true;
                 currTime = 0f;
             }
-            ScoreBox.fillAmount = (waitTime - currTime) / waitTime;
+
+            if (currTime != 0f)
+            {
+                ScoreBox.fillAmount = 1f - ((waitTime - currTime) / waitTime);
+            }
+            else
+            {
+                ScoreBox.fillAmount = 1f;
+            }
         }
 
         PlayerInput();
