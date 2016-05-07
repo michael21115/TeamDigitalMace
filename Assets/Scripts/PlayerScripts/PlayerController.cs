@@ -14,8 +14,10 @@ public class PlayerController : MonoBehaviour {
     public float speed = 2000f;
     public float dashSpeed = 5f;
     public float dashBoost = 1000f;
-    bool canDash = true;
-    bool hasDashed = false;
+    [HideInInspector] public bool canDash = true;
+    [HideInInspector] public bool hasDashed = false;
+
+    [HideInInspector] public bool grounded;
 
     [HideInInspector] public float horizontal;
     [HideInInspector] public float vertical;
@@ -83,6 +85,8 @@ public class PlayerController : MonoBehaviour {
 
         Ray groundCheck = new Ray(transform.position, -transform.up);
         RaycastHit groundCheckInfo = new RaycastHit();
+
+        grounded = Physics.Raycast(groundCheck, out groundCheckInfo, (transform.localScale.y * 0.5f * 1.05f));
 
         if (Physics.Raycast(groundCheck, out groundCheckInfo, (transform.localScale.y * 0.5f * 1.05f)))
         {
@@ -162,13 +166,14 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
-    void Cross_Button ()
+    public void Cross_Button ()
     {
         if (GetComponent<ObjectInteraction>().throwItem)
         {
             Transform throwObject = GetComponent<ObjectInteraction>().hands[0].GetChild(0);
             Rigidbody objectRB = throwObject.GetComponent<Rigidbody>();
 
+            GetComponent<ObjectInteraction>().hands[0].localPosition = Vector3.one * 0.5f;
             // throw the game object in your off hand
             GetComponent<ObjectInteraction>().throwItem = false;
             throwObject.tag = "Projectile";
@@ -181,15 +186,15 @@ public class PlayerController : MonoBehaviour {
             GetComponent<ObjectInteraction>().hands[0].DetachChildren();
         }
     }
-    void Circle_Button ()
+    public void Circle_Button ()
     {
 
     }
-    void Triangle_Button ()
+    public void Triangle_Button ()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
-    void Square_Button ()
+    public void Square_Button ()
     {
         if (canDash && !hasDashed)
         {
@@ -198,19 +203,19 @@ public class PlayerController : MonoBehaviour {
             GetComponent<Rigidbody>().AddForce((Vector3.up * dashBoost) + (transform.forward * dashSpeed * dashBoost));
         }
 
-        if (GetComponent<ObjectInteraction>().throwItem)
-        {
-            Transform throwObject = GetComponent<ObjectInteraction>().hands[0].GetChild(0);
-            Rigidbody objectRB = throwObject.GetComponent<Rigidbody>();
+        //if (GetComponent<ObjectInteraction>().throwItem)
+        //{
+        //    Transform throwObject = GetComponent<ObjectInteraction>().hands[0].GetChild(0);
+        //    Rigidbody objectRB = throwObject.GetComponent<Rigidbody>();
 
-            // drop the game object in your off hand
-            GetComponent<ObjectInteraction>().throwItem = false;
-            objectRB.constraints = RigidbodyConstraints.None;
-            objectRB.constraints = RigidbodyConstraints.FreezeRotation;
-            objectRB.mass = GetComponent<ObjectInteraction>().objectMass; // resets the mass of the object before it is thrown
-            objectRB.AddForce(transform.up * 500);
-            objectRB.useGravity = true;
-            GetComponent<ObjectInteraction>().hands[0].DetachChildren();
-        }
+        //    // drop the game object in your off hand
+        //    GetComponent<ObjectInteraction>().throwItem = false;
+        //    objectRB.constraints = RigidbodyConstraints.None;
+        //    objectRB.constraints = RigidbodyConstraints.FreezeRotation;
+        //    objectRB.mass = GetComponent<ObjectInteraction>().objectMass; // resets the mass of the object before it is thrown
+        //    objectRB.AddForce(transform.up * 500);
+        //    objectRB.useGravity = true;
+        //    GetComponent<ObjectInteraction>().hands[0].DetachChildren();
+        //}
     }
 }
