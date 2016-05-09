@@ -6,6 +6,8 @@ public class AnimationController : MonoBehaviour {
     Animator anim;
     PlayerController move;
 
+    bool isDashing;
+
 	// Use this for initialization
 	void Start ()
     {
@@ -27,5 +29,20 @@ public class AnimationController : MonoBehaviour {
             anim.SetBool("isMoving", false);
             anim.SetFloat("isRunning", 0f);
         }
+
+        // Dash animation
+        if (move.hasDashed)
+        {
+            isDashing = true;
+            anim.SetTrigger("hasDashed");
+        }
+
+        if (!move.canDash && move.grounded && isDashing)
+        {
+            isDashing = false;
+            anim.SetTrigger("grounded");
+        }
+
+        anim.SetBool("isDashing", isDashing);
 	}
 }

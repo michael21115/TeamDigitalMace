@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 4f6d3e9f472f34de58fe6e24a48a932a
-timeCreated: 1462303473
+guid: 1c73fe78f9a9d254fb11f7d74a054fd2
+timeCreated: 1462593177
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -95,7 +95,7 @@ ModelImporter:
     400086: //RootNode
     4300000: PlayerTemplate:Head_Geo
     4300002: PlayerTemplate:Body_Geo
-    7400000: Run
+    7400000: Dive_End
     9500000: //RootNode
     13700000: PlayerTemplate:Body_Geo
     13700002: PlayerTemplate:Head_Geo
@@ -113,7 +113,7 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
-    animationCompression: 3
+    animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -121,9 +121,9 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: Run
+      name: Dive_End
       takeName: Take 001
-      firstFrame: 1
+      firstFrame: 15
       lastFrame: 30
       wrapMode: 0
       orientationOffsetY: 0
@@ -131,10 +131,10 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
-      loopBlendPositionY: 1
+      loopBlendPositionY: 0
       loopBlendPositionXZ: 0
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1

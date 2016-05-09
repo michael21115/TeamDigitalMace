@@ -4,7 +4,9 @@ using System.Collections;
 public class ObjectInteraction : MonoBehaviour {
 
     [SerializeField] GameObject iGotIt;
+    public Transform[] handPos;
     public Transform[] hands;
+
     public float throwForce;
     public bool throwItem, keyItem;
     public string throwItemName, keyItemName;
@@ -18,6 +20,9 @@ public class ObjectInteraction : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
+        hands[0].position = handPos[0].position;
+        hands[1].position = handPos[1].position;
+
         if (hands[0].childCount == 0)
         {
             throwItem = false;
@@ -36,34 +41,33 @@ public class ObjectInteraction : MonoBehaviour {
 
         // If another player bumps into you then apply a bounce force in their direction
         // If a projectile or player hits you, drop the key item you are holding and apply knockback
-        if (other.collider.tag == "Projectile") // || other.collider.tag == "Player")
-        {
-            if (keyItem)
-            {
-                Rigidbody keyItemRB = hands[1].FindChild(keyItemName).GetComponent<Rigidbody>();
+        //if (other.collider.tag == "Projectile") // || other.collider.tag == "Player")
+        //{
+        //    if (keyItem)
+        //    {
+        //        Rigidbody keyItemRB = hands[1].FindChild(keyItemName).GetComponent<Rigidbody>();
 
-                keyItemRB.constraints = RigidbodyConstraints.None;
-                keyItemRB.constraints = RigidbodyConstraints.FreezeRotation;
-                keyItemRB.detectCollisions = true;
-                keyItemRB.useGravity = true;
-                hands[1].DetachChildren();
-            }
+        //        keyItemRB.constraints = RigidbodyConstraints.None;
+        //        keyItemRB.constraints = RigidbodyConstraints.FreezeRotation;
+        //        keyItemRB.detectCollisions = true;
+        //        keyItemRB.useGravity = true;
+        //        hands[1].DetachChildren();
+        //    }
 
-            GetComponent<Rigidbody>().AddForce(-transform.forward * 500 + Vector3.up * 300);
-        }
+        //    GetComponent<Rigidbody>().AddForce(-transform.forward * 500 + Vector3.up * 300);
+        //}
         // If the item you bump into is a grabable item and you currently don't have one, pick it up
         if (other.collider.tag == "Grabby Thing" && !throwItem)
         {
             objectMass = other.gameObject.GetComponent<ThrowableObjects>().mass;
             throwItemName = other.gameObject.name;
 
-                otherRB.constraints = RigidbodyConstraints.FreezeAll;
-                otherRB.mass = 0;
-                other.transform.position = hands[0].position;
-                other.transform.SetParent(hands[0]);
-            otherRB.mass = 0f;
-                otherRB.useGravity = false;
-                throwItem = true;
+            otherRB.constraints = RigidbodyConstraints.FreezeAll;
+            otherRB.mass = 0;
+            other.transform.position = hands[0].position;
+            other.transform.SetParent(hands[0]);
+            otherRB.useGravity = false;
+            throwItem = true;
         }
         // If the other item is a key item and you aren't holding a key item, pick it up
         if (other.collider.tag == "Key Item" && !keyItem)

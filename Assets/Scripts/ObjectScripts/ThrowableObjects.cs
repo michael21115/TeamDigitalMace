@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 public class ThrowableObjects : MonoBehaviour {
 
-    [SerializeField] float waitTime = 1f;
+    float waitTime = 0.2f;
     float currTime = 0f;
 
     public float mass;
@@ -23,16 +23,15 @@ public class ThrowableObjects : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        if (gameObject.tag == "Projectile")
+        if (thisRB.velocity.magnitude > 1f)
         {
-            currTime += Time.deltaTime;
-            if (currTime >= waitTime)
-            {
-                gameObject.tag = "Grabby Thing";
-                currTime = 0f;
-            }
+            gameObject.tag = "Projectile";
         }
-	}
+        else
+        {
+            gameObject.tag = "Grabby Thing";
+        }
+    }
 
     void OnCollisionEnter (Collision other)
     {

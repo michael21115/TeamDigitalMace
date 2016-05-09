@@ -29,7 +29,7 @@ public class PlayerBounce : MonoBehaviour {
 
     void OnCollisionEnter(Collision col)
     {
-        if (col.collider.tag.Contains("Player"))
+        if (col.collider.tag.Contains("Player") || col.collider.tag == "Projectile")
         {
             //Debug.Log("Its a player!");
             direction = (col.collider.transform.position - transform.position).normalized;
