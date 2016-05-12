@@ -4,9 +4,12 @@ using UnityEngine.SceneManagement;
 
 public class titleScreenScript : MonoBehaviour {
 
+    [SerializeField]
+    Transform scoreLogic;
+
 	// Use this for initialization
 	void Start () {
-	
+	    
 	}
 	
 	// Update is called once per frame
@@ -14,6 +17,7 @@ public class titleScreenScript : MonoBehaviour {
 	    if (Input.GetKeyDown(KeyCode.Space))
         {
             SceneManager.LoadScene(1);  //this should lead to main gameplay screen, so change it in master
+            scoreLogic.GetComponent<ScoreLogic>().reset();
         }
 	}
 }

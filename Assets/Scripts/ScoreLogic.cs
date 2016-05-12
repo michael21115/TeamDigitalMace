@@ -73,9 +73,15 @@ public class ScoreLogic : MonoBehaviour {
                 BombSpawner = GameObject.Find("BombSpawner").transform;
                 placeComponent(BombSpawner);
 
-                PlayerContainer = GameObject.Find("PlayerContainer").transform;
-                placeComponent(PlayerContainer);
-                playersSpawned = true;
+                if (!playersSpawned)
+                {
+                    int tempHeight = Random.Range(0, maxHeight);
+                    int tempWidth = Random.Range(0, maxWidth);
+                    //Debug.Log (tempHeight + " , " + tempWidth);
+                    GameObject destination = GameObject.Find("RoomController (" + tempHeight + " , " + tempWidth + ")");
+                    Instantiate(PlayerContainer, destination.transform.position, Quaternion.identity);
+                    playersSpawned = true;
+                }
             }
         }
 	}
@@ -98,5 +104,14 @@ public class ScoreLogic : MonoBehaviour {
         {
             ScoreP4++;
         }
+    }
+
+    public void reset()
+    {
+        ScoreP1 = 0;
+        ScoreP2 = 0;
+        ScoreP3 = 0;
+        ScoreP4 = 0;
+        winner = null;
     }
 }
